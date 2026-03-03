@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Stock Market Prediction with RNN/LSTM — time series, financial ML project by Shouhaybou Mbow.">
+    <title>Stock Market Prediction</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!--- box icons link --->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--- remix icons link --->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!--- google font link --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="project-page">
+    <header>
+        <a href="index.html" class="logo">Portfolio</a>
+
+        <ul class="navlist">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#portfolio">Projects</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="index.html#contact" class="nav-btn">Hire Me!</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <section class="project-details reveal">
+        <div class="container">
+            <h2>Stock Market Prediction</h2>
+            <div class="project-image">
+                <img src="stock.jpg" alt="Stock Market Prediction Project">
+            </div>
+            <div class="project-description">
+                <h3>Project Overview</h3>
+                <p>
+                    Data collection and preprocessing from financial APIs.<br>
+                    Conducted Exploratory Data Analysis (EDA) 
+                    to analyze market trends and identify patterns.<br>
+
+                    Implemented Recurrent Neural Networks (RNN) for stock market prediction.<br>
+                    Evaluated the RNN model using performance metrics such as Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE).<br>
+                    Visualized and analyzed predictions versus actual stock prices to assess model accuracy and performance.
+                </p>
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Pandas</li>
+                    <li>NumPy</li>
+                    <li>machine learning</li>
+                    <li>deep learning</li>
+                    <li>Matplotlib</li>
+                    
+                </ul>
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Data collection and preprocessing from financial APIs.</li>
+                    <li>Exploratory Data Analysis (EDA) to understand market trends.</li>
+                    <li>Implementation of various machine learning models like Linear Regression, Decision Trees, and LSTM neural networks.</li>
+                    <li>Model evaluation using metrics such as Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE).</li>
+                    <li>Visualization of predictions vs actual stock prices.</li>
+                </ul>
+                <h3>Results</h3>
+                <p>
+                    The model achieved significant accuracy in predicting stock prices, demonstrating the potential of machine learning in financial forecasting.
+                </p>
+                <div class="project-btns">
+                    <a href="index.html#portfolio" class="btn">Back to Projects</a>
+                    <a href="https://github.com/shouhaybou/Stock_prediction_using_rnn/blob/main/stock_prediction_using_rnn.ipynb" class="btn2">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-to-projects">
+        <a href="index.html#portfolio" class="btn">← Back to Projects</a>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-inner">
+            <nav class="footer-nav">
+                <a href="index.html#portfolio">Projects</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="Shouhaybou_Mbow_Resume v4.1.pdf">Resume</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/shouhaybou-mbow/" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                <a href="https://github.com/shouhaybou?tab=repositories" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+            </div>
+            <p class="footer-credit">© 2025 Shouhaybou Mbow · All Rights Reserved</p>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        (function() {
+            var icon = document.getElementById("menu-icon");
+            var nav = document.querySelector(".navlist");
+            if (icon && nav) {
+                icon.addEventListener("click", function() { nav.classList.toggle("open"); });
+            }
+            document.querySelectorAll(".reveal").forEach(function(el) { el.classList.add("visible"); });
+            var backEl = document.querySelector(".back-to-projects");
+            var headerEl = document.querySelector("header");
+            var lastScrollY = 0;
+            function onScroll() {
+                if (backEl) {
+                    var nearBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 150;
+                    backEl.classList.toggle("back-to-projects--visible", nearBottom);
+                }
+                if (headerEl) {
+                    if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                        headerEl.classList.add("header--hidden");
+                    } else if (window.scrollY < lastScrollY) {
+                        headerEl.classList.remove("header--hidden");
+                    }
+                }
+                lastScrollY = window.scrollY;
+            }
+            window.addEventListener("scroll", function() { requestAnimationFrame(onScroll); });
+            onScroll();
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Housing Data Prediction — regression, Scikit-learn, feature engineering project by Shouhaybou Mbow.">
+    <title>Housing Data Prediction Project - Shouhaybou Mbow</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="project-page">
+    <header>
+        <a href="index.html" class="logo">Portfolio</a>
+        <ul class="navlist">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="index.html#contact" class="nav-btn">Hire Me!</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <section class="project-detail reveal">
+        <div class="container">
+            <h1>Housing Data Prediction Project</h1>
+            <img src="house3.jpg" alt="Housing Data Prediction Project Image" class="project-img">
+            <p>
+                This project involves building a predictive model to forecast housing prices using a variety of data features. 
+                The project includes data preprocessing, feature engineering, model training, and evaluation. 
+                The model aims to provide accurate predictions to assist in making informed decisions in the real estate market.
+            </p>
+            <h2>Project Details</h2>
+            <p>
+                <strong>Technologies Used:</strong> Python, Scikit-learn, Pandas, NumPy<br>
+                <strong>Data Source:</strong> Github<br>
+                <strong>Key Features:</strong>
+            </p>
+            <ul>
+                <li>Data cleaning and preprocessing</li>
+                <li>Exploratory data analysis and feature engineering</li>
+                <li>Model training with various regression algorithms</li>
+                <li>Model evaluation and selection</li>
+            </ul>
+
+            <h2>Some of the Code</h2>
+            <pre class="code-block">
+<code>
+// preview code for data preprocessing in the Housing Data Prediction project
+
+# Imports
+import os
+import tarfile
+from six.moves import urllib
+
+# Constants
+DOWNLOAD_ROOT = "https://raw.githubusercontent.com/ageron/handson-ml2/master/"
+HOUSING_PATH = os.path.join("datasets", "housing")
+HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
+
+# Method to download the data
+def fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH):
+    if not os.path.isdir(housing_path):
+        os.makedirs(housing_path)
+    tgz_path = os.path.join(housing_path, "housing.tgz")
+    urllib.request.urlretrieve(housing_url, tgz_path)
+    housing_tgz = tarfile.open(tgz_path)
+    housing_tgz.extractall(path=housing_path)
+    housing_tgz.close()
+fetch_housing_data(HOUSING_URL, HOUSING_PATH)
+
+def load_housing_data(housing_path=HOUSING_PATH):
+    csv_path = os.path.join(housing_path, "housing.csv")
+    return pd.read_csv(csv_path)
+
+def split_train_test(data, test_ratio):
+    shuffled_indices = np.random.permutation(len(data))
+    test_set_size = int(len(data) * test_ratio)
+    test_indices = shuffled_indices[:test_set_size]
+    train_indices = shuffled_indices[test_set_size:]
+    return data.iloc[train_indices], data.iloc[test_indices]
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
+
+# Standardize features
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+</code>
+            </pre>
+            <div class="project-links">
+                <a href="Housing Data Prediction.zip" class="btn">Download Code</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-to-projects">
+        <a href="index.html#portfolio" class="btn">← Back to Projects</a>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-inner">
+            <nav class="footer-nav">
+                <a href="index.html#portfolio">Projects</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="Shouhaybou_Mbow_Resume v4.1.pdf">Resume</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/shouhaybou-mbow/" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                <a href="https://github.com/shouhaybou?tab=repositories" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+            </div>
+            <p class="footer-credit">© 2025 Shouhaybou Mbow · All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        (function() {
+            var icon = document.getElementById("menu-icon");
+            var nav = document.querySelector(".navlist");
+            if (icon && nav) {
+                icon.addEventListener("click", function() { nav.classList.toggle("open"); });
+            }
+            document.querySelectorAll(".reveal").forEach(function(el) { el.classList.add("visible"); });
+            var backEl = document.querySelector(".back-to-projects");
+            var headerEl = document.querySelector("header");
+            var lastScrollY = 0;
+            function onScroll() {
+                if (backEl) {
+                    var nearBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 150;
+                    backEl.classList.toggle("back-to-projects--visible", nearBottom);
+                }
+                if (headerEl) {
+                    if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                        headerEl.classList.add("header--hidden");
+                    } else if (window.scrollY < lastScrollY) {
+                        headerEl.classList.remove("header--hidden");
+                    }
+                }
+                lastScrollY = window.scrollY;
+            }
+            window.addEventListener("scroll", function() { requestAnimationFrame(onScroll); });
+            onScroll();
+        })();
+    </script>
+</body>
+</html>
+

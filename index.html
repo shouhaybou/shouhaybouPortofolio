@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shouhaybou Mbow — Data Scientist, Machine Learning Engineer & AI Engineer. Portfolio: ML models, RAG, data visualization, and data-driven solutions.">
+    <title>Shouhaybou's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!--- box icons link --->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--- remix icons link --->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!--- google font link --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="index.html#home" class="logo">Portfolio</a>
+
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="#contact" class="nav-btn">Hire Me!</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-text reveal">
+            <h6>Hello, <span>my name is</span></h6>
+            <h1><span>Shouhaybou</span> Mbow</h1>
+            <h4>I am a <span class="input"></span></h4>
+            <p class="hero-tagline">Turning data into decisions that drive growth.</p>
+            <p class="indented">As a data scientist, I leverage advanced statistical analysis,<br>  
+            machine learning, and data visualization techniques to extract insights from complex datasets
+            and drive strategic decision-making.<br> 
+            With a strong background in computer science and a passion for problem-solving,<br>  
+            I thrive on transforming raw data into actionable intelligence for business growth.</p>
+
+            <div class="hero-icons">
+                <a href="https://www.linkedin.com/in/shouhaybou-mbow/"><i class="ri-linkedin-fill" aria-label="LinkedIn"></i></a>
+                <a href="https://github.com/shouhaybou?tab=repositories"><i class="ri-github-fill" aria-label="GitHub"></i></a>
+            </div>
+            <div class='hero-btn'>
+                <a href="Shouhaybou_Mbow_Resume v4.1.pdf" class="btn">Download Resume/CV</a>
+                <a href="#skills" class="btn2">My Skills</a>
+            </div>
+        </div>
+        <div class="hero-img reveal">
+            <img src="prof_img.png" alt="Profile Image" class="profile-img" width="200" height="200">
+        </div>
+    </section>
+    <div class="scroll">
+        <a href="#footer"><i class="ri-scroll-to-bottom-fill"></i>Scroll Bottom</a>
+    </div>
+
+
+    <section class="skills reveal" id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skill-icons">
+                <div class="skill reveal-card">
+                    <i class="ri-code-s-slash-line"></i>
+                    <h3>Data Analysis</h3>
+                    <p>I have experience in analyzing and interpreting complex data sets to extract valuable insights.<br>Relevant Skills: SQL, R, Excel, Python</p>
+                </div>
+                <div class="skill reveal-card">
+                    <i class="bx bx-brain"></i>
+                    <h3>Machine Learning</h3>
+                    <p>I am proficient in developing and implementing machine learning algorithms for predictive modeling and pattern recognition.<br>Relevant Skills: Machine Learning, DeepLearning, Big Data</p>
+                </div>
+                <div class="skill reveal-card">
+                    <i class="ri-bar-chart-2-line"></i>
+                    <h3>Data Visualization</h3>
+                    <p>I excel in creating visually appealing and informative data visualizations to communicate findings effectively.<br>Relevant Skills: Tableau, Dashboard, Seaborn, Matplotlib</p>
+                </div>
+                <div class="skill reveal-card">
+                    <i class="ri-robot-2-line"></i>
+                    <h3>AI Engineering</h3>
+                    <p>I build production AI systems including RAG (Retrieval-Augmented Generation), LLM integrations, and intelligent applications.<br>Relevant Skills: RAG, LangChain, Vector DBs, Embeddings, Prompt Engineering</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal" id="portfolio">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="portfolio-icons">
+                <div class="project reveal-card">
+                    <div class="project-img-wrap">
+                        <img src="brain_tumor.jpg" alt="Brain Tumor Classification" loading="lazy" width="400" height="180">
+                        <span class="project-overlay">View project</span>
+                    </div>
+                    <h3>Brain Tumor Classification</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">TensorFlow</span>
+                        <span class="project-tag">CNN</span>
+                    </div>
+                    <a href="brain_tumor.html" class="btn">View Project</a>
+                </div>
+                <div class="project reveal-card">
+                    <div class="project-img-wrap">
+                        <img src="aws2.jpg" alt="AWS DeepRacer" loading="lazy" width="400" height="180">
+                        <span class="project-overlay">View project</span>
+                    </div>
+                    <h3>Autonomous Car Programming using AWS DeepRacer</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">AWS</span>
+                        <span class="project-tag">Reinforcement Learning</span>
+                    </div>
+                    <a href="aws_project.html" class="btn">View Project</a>
+                </div>
+                <div class="project reveal-card">
+                    <div class="project-img-wrap">
+                        <img src="house2.jpg" alt="House Data Prediction" loading="lazy" width="400" height="180">
+                        <span class="project-overlay">View project</span>
+                    </div>
+                    <h3>House Data Prediction</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Scikit-learn</span>
+                    </div>
+                    <a href="housing_predictions.html" class="btn">View Project</a>
+                </div>
+                <div class="project reveal-card">
+                    <div class="project-img-wrap">
+                        <img src="stock_m.jpeg" alt="Stock Market Prediction" loading="lazy" width="400" height="180">
+                        <span class="project-overlay">View project</span>
+                    </div>
+                    <h3>Stock Market Prediction</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">LSTM</span>
+                    </div>
+                    <a href="stock_market_prediction.html" class="btn">View Project</a>
+                </div>
+                <div class="project reveal-card">
+                    <div class="project-img-wrap">
+                        <img src="credit_card.jpeg" alt="Credit Card Fraud Detection" loading="lazy" width="400" height="180">
+                        <span class="project-overlay">View project</span>
+                    </div>
+                    <h3>Credit Card Fraud Detection</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Scikit-learn</span>
+                    </div>
+                    <a href="credit_card_fraud_detection.html" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal" id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form class="contact-form" method="post" action="https://api.web3forms.com/submit">
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                <input type="hidden" name="subject" value="New message from portfolio site">
+
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required placeholder="Your name">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="you@example.com">
+
+                <label for="message">Message</label>
+                <textarea name="message" id="message" required placeholder="Your message..."></textarea>
+
+                <button type="submit" class="btn btn-submit">Send message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-inner">
+            <nav class="footer-nav">
+                <a href="#portfolio">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="Shouhaybou_Mbow_Resume v4.1.pdf">Resume</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/shouhaybou-mbow/" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                <a href="https://github.com/shouhaybou?tab=repositories" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+            </div>
+            <p class="footer-credit">© 2025 Shouhaybou Mbow · All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script type="text/javascript">
+        var typed = new Typed(".input", {
+            strings: ["Data Scientist", "Data Analyst", "Machine Learning Engineer", "AI Engineer"],
+            typeSpeed: 80,
+            backSpeed: 70,
+            loop: true
+        });
+    </script>
+    <script type="text/javascript">
+        (function() {
+            var icon = document.getElementById("menu-icon");
+            var nav = document.querySelector(".navlist");
+            if (icon && nav) {
+                icon.addEventListener("click", function() { nav.classList.toggle("open"); });
+            }
+        })();
+    </script>
+    <script type="text/javascript">
+        (function() {
+            var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            function smoothScroll() {
+                document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+                    var id = a.getAttribute("href");
+                    if (id === "#") return;
+                    var target = document.querySelector(id);
+                    if (target) {
+                        a.addEventListener("click", function(e) {
+                            e.preventDefault();
+                            var scrollToEnd = id === "#footer";
+                            target.scrollIntoView({
+                                behavior: reducedMotion ? "auto" : "smooth",
+                                block: scrollToEnd ? "end" : "start"
+                            });
+                            var navList = document.querySelector(".navlist");
+                            if (navList) navList.classList.remove("open");
+                        });
+                    }
+                });
+            }
+
+            function scrollReveal() {
+                if (reducedMotion) {
+                    document.querySelectorAll(".reveal, .reveal-card").forEach(function(el) { el.classList.add("visible"); });
+                    return;
+                }
+                var cards = document.querySelectorAll(".reveal-card");
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry, i) {
+                        if (!entry.isIntersecting) return;
+                        var el = entry.target;
+                        var delay = el.classList.contains("reveal-card") ? (Array.prototype.indexOf.call(cards, el) * 80) : 0;
+                        setTimeout(function() { el.classList.add("visible"); }, delay);
+                    });
+                }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+                document.querySelectorAll(".reveal").forEach(function(el) {
+                    if (el.classList.contains("reveal-card")) return;
+                    observer.observe(el);
+                });
+                cards.forEach(function(el) { observer.observe(el); });
+            }
+
+            function activeNav() {
+                var sections = document.querySelectorAll("section[id]");
+                var navLinks = document.querySelectorAll(".navlist a[href^='#']");
+                var headerEl = document.querySelector("header");
+                var lastScrollY = 0;
+                function update() {
+                    var top = window.scrollY + 120;
+                    sections.forEach(function(section) {
+                        var id = section.getAttribute("id");
+                        var box = section.getBoundingClientRect();
+                        var offsetTop = section.offsetTop;
+                        if (top >= offsetTop - 100 && top < offsetTop + section.offsetHeight - 100) {
+                            navLinks.forEach(function(link) {
+                                link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+                            });
+                        }
+                    });
+                    var scrollEl = document.querySelector(".scroll");
+                    if (scrollEl) {
+                        scrollEl.classList.toggle("scroll--hidden", window.scrollY > window.innerHeight * 0.4);
+                    }
+                    if (headerEl) {
+                        if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                            headerEl.classList.add("header--hidden");
+                        } else if (window.scrollY < lastScrollY) {
+                            headerEl.classList.remove("header--hidden");
+                        }
+                    }
+                    lastScrollY = window.scrollY;
+                }
+                window.addEventListener("scroll", function() { requestAnimationFrame(update); });
+                update();
+            }
+
+            smoothScroll();
+            scrollReveal();
+            activeNav();
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brain Tumor Detection with deep learning — CNN, TensorFlow, Keras project by Shouhaybou Mbow.">
+    <title>Brain Tumor Project - Shouhaybou Mbow</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="project-page">
+    <header>
+        <a href="index.html" class="logo">Portfolio</a>
+        <ul class="navlist">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="index.html#contact" class="nav-btn">Hire Me!</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <section class="project-detail reveal">
+        <div class="container">
+            <h1>Brain Tumor Detection Project</h1>
+            <img src="brain_tumor.jpg" alt="Brain Tumor Project Image" class="project-img">
+            <p>
+                This project involves the development of a machine learning model to detect brain tumors from MRI scans. 
+                The model leverages advanced deep learning techniques to accurately classify images as either containing a tumor or not. 
+                The project includes data preprocessing, model training, and evaluation phases, ensuring high accuracy and reliability.
+            </p>
+            <h2>Project Details</h2>
+            <p>
+                <strong>Technologies Used:</strong> Python, TensorFlow, Keras, OpenCV<br>
+                <strong>Data Source:</strong> Kaggle<br>
+                <strong>Key Features:</strong>
+            </p>
+            <ul>
+                <li>Data preprocessing and augmentation</li>
+                <li>Custom convolutional neural network (CNN) architecture</li>
+                <li>Model evaluation and validation</li>
+                <li>F1-score computed on the test dataset</li>
+            </ul>
+            <div class="project-links">
+                <a href="Brain Tumor Classification.zip" class="btn">Download Code</a>
+                <a href="Brain Tumor Classification.pdf" class="btn">Read Paper</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-to-projects">
+        <a href="index.html#portfolio" class="btn">← Back to Projects</a>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-inner">
+            <nav class="footer-nav">
+                <a href="index.html#portfolio">Projects</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="Shouhaybou_Mbow_Resume v4.1.pdf">Resume</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/shouhaybou-mbow/" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                <a href="https://github.com/shouhaybou?tab=repositories" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+            </div>
+            <p class="footer-credit">© 2025 Shouhaybou Mbow · All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        (function() {
+            var icon = document.getElementById("menu-icon");
+            var nav = document.querySelector(".navlist");
+            if (icon && nav) {
+                icon.addEventListener("click", function() { nav.classList.toggle("open"); });
+            }
+            document.querySelectorAll(".reveal").forEach(function(el) { el.classList.add("visible"); });
+            var backEl = document.querySelector(".back-to-projects");
+            var headerEl = document.querySelector("header");
+            var lastScrollY = 0;
+            function onScroll() {
+                if (backEl) {
+                    var nearBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 150;
+                    backEl.classList.toggle("back-to-projects--visible", nearBottom);
+                }
+                if (headerEl) {
+                    if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                        headerEl.classList.add("header--hidden");
+                    } else if (window.scrollY < lastScrollY) {
+                        headerEl.classList.remove("header--hidden");
+                    }
+                }
+                lastScrollY = window.scrollY;
+            }
+            window.addEventListener("scroll", function() { requestAnimationFrame(onScroll); });
+            onScroll();
+        })();
+    </script>
+</body>
+</html>
