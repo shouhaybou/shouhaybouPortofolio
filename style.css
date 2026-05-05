@@ -105,6 +105,26 @@ header.header--hidden {
     border: 2px solid var(--main-color);
 }
 
+.lang-toggle {
+    background: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.2s, color 0.2s;
+    font-family: inherit;
+    letter-spacing: 0.04em;
+}
+
+.lang-toggle:hover {
+    background: var(--main-color);
+    color: #fff;
+}
+
 .profile-img {
     width: 200px;
     height: 200px;

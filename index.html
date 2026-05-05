@@ -21,16 +21,17 @@
 
 <body>
     <header>
-        <a href="index.html#home" class="logo">Portfolio</a>
+        <a href="index.html#home" class="logo" data-i18n="nav_logo">Portfolio</a>
 
         <ul class="navlist">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#portfolio">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-i18n="nav_home">Home</a></li>
+            <li><a href="#portfolio" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
         </ul>
         <div class="nav-right">
-            <a href="#contact" class="nav-btn">Hire Me!</a>
+            <a href="#contact" class="nav-btn" data-i18n="nav_hire">Hire Me!</a>
+            <button id="lang-toggle" class="lang-toggle">FR</button>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
     </header>
@@ -38,11 +39,11 @@
     <section class="hero" id="home">
         <div class="hero-bg" aria-hidden="true"></div>
         <div class="hero-text reveal">
-            <h6>Hello, <span>my name is</span></h6>
+            <h6 data-i18n="hero_greeting">Hello, <span>my name is</span></h6>
             <h1><span>Shouhaybou</span> Mbow</h1>
             <h4>I am a <span class="input"></span></h4>
-            <p class="hero-tagline">Turning data into decisions that drive growth.</p>
-            <p class="indented">As a data scientist, I leverage advanced statistical analysis,<br>  
+            <p class="hero-tagline" data-i18n="hero_tagline">Turning data into decisions that drive growth.</p>
+            <p class="indented" data-i18n="hero_desc">As a data scientist, I leverage advanced statistical analysis,<br>  
             machine learning, and data visualization techniques to extract insights from complex datasets
             and drive strategic decision-making.<br> 
             With a strong background in computer science and a passion for problem-solving,<br>  
@@ -53,8 +54,8 @@
                 <a href="https://github.com/shouhaybou?tab=repositories"><i class="ri-github-fill" aria-label="GitHub"></i></a>
             </div>
             <div class='hero-btn'>
-                <a href="shouhaybou_cv.pdf" class="btn">Download Resume/CV</a>
-                <a href="#skills" class="btn2">My Skills</a>
+                <a href="shouhaybou_cv.pdf" class="btn" data-i18n="hero_download_cv">Download Resume/CV</a>
+                <a href="#skills" class="btn2" data-i18n="hero_my_skills">My Skills</a>
             </div>
         </div>
         <div class="hero-img reveal">
@@ -62,33 +63,33 @@
         </div>
     </section>
     <div class="scroll">
-        <a href="#footer"><i class="ri-scroll-to-bottom-fill"></i>Scroll Bottom</a>
+        <a href="#footer"><i class="ri-scroll-to-bottom-fill"></i><span data-i18n="scroll_bottom">Scroll Bottom</span></a>
     </div>
 
 
     <section class="skills reveal" id="skills">
         <div class="container">
-            <h2>My Skills</h2>
+            <h2 data-i18n="skills_title">My Skills</h2>
             <div class="skill-icons">
                 <div class="skill reveal-card">
                     <i class="ri-code-s-slash-line"></i>
-                    <h3>Data Analysis</h3>
-                    <p>I have experience in analyzing and interpreting complex data sets to extract valuable insights.<br>Relevant Skills: SQL, R, Excel, Python</p>
+                    <h3 data-i18n="da_title">Data Analysis</h3>
+                    <p data-i18n="da_desc">I have experience in analyzing and interpreting complex data sets to extract valuable insights.<br>Relevant Skills: SQL, R, Excel, Python</p>
                 </div>
                 <div class="skill reveal-card">
                     <i class="bx bx-brain"></i>
-                    <h3>Machine Learning</h3>
-                    <p>I am proficient in developing and implementing machine learning algorithms for predictive modeling and pattern recognition.<br>Relevant Skills: Machine Learning, DeepLearning, Big Data</p>
+                    <h3 data-i18n="ml_title">Machine Learning</h3>
+                    <p data-i18n="ml_desc">I am proficient in developing and implementing machine learning algorithms for predictive modeling and pattern recognition.<br>Relevant Skills: Machine Learning, DeepLearning, Big Data</p>
                 </div>
                 <div class="skill reveal-card">
                     <i class="ri-bar-chart-2-line"></i>
-                    <h3>Data Visualization</h3>
-                    <p>I excel in creating visually appealing and informative data visualizations to communicate findings effectively.<br>Relevant Skills: Tableau, Dashboard, Seaborn, Matplotlib</p>
+                    <h3 data-i18n="viz_title">Data Visualization</h3>
+                    <p data-i18n="viz_desc">I excel in creating visually appealing and informative data visualizations to communicate findings effectively.<br>Relevant Skills: Tableau, Dashboard, Seaborn, Matplotlib</p>
                 </div>
                 <div class="skill reveal-card">
                     <i class="ri-robot-2-line"></i>
-                    <h3>AI Engineering</h3>
-                    <p>I build production AI systems including RAG (Retrieval-Augmented Generation), LLM integrations, and intelligent applications.<br>Relevant Skills: RAG, LangChain, Vector DBs, Embeddings, Prompt Engineering</p>
+                    <h3 data-i18n="ai_title">AI Engineering</h3>
+                    <p data-i18n="ai_desc">I build production AI systems including RAG (Retrieval-Augmented Generation), LLM integrations, and intelligent applications.<br>Relevant Skills: RAG, LangChain, Vector DBs, Embeddings, Prompt Engineering</p>
                 </div>
             </div>
         </div>
@@ -96,68 +97,68 @@
 
     <section class="reveal" id="portfolio">
         <div class="container">
-            <h2>Projects</h2>
+            <h2 data-i18n="projects_title">Projects</h2>
             <div class="portfolio-icons">
                 <div class="project reveal-card">
                     <div class="project-img-wrap">
                         <img src="brain_Tumor.jpg" alt="Brain Tumor Classification" loading="lazy" width="400" height="180">
-                        <span class="project-overlay">View project</span>
+                        <span class="project-overlay" data-i18n="view_project_overlay">View project</span>
                     </div>
-                    <h3>Brain Tumor Classification</h3>
+                    <h3 data-i18n="brain_tumor_title">Brain Tumor Classification</h3>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">TensorFlow</span>
                         <span class="project-tag">CNN</span>
                     </div>
-                    <a href="brain_tumor.html" class="btn">View Project</a>
+                    <a href="brain_tumor.html" class="btn" data-i18n="view_project_btn">View Project</a>
                 </div>
                 <div class="project reveal-card">
                     <div class="project-img-wrap">
                         <img src="aws2.jpg" alt="AWS DeepRacer" loading="lazy" width="400" height="180">
-                        <span class="project-overlay">View project</span>
+                        <span class="project-overlay" data-i18n="view_project_overlay">View project</span>
                     </div>
-                    <h3>Autonomous Car Programming using AWS DeepRacer</h3>
+                    <h3 data-i18n="aws_title">Autonomous Car Programming using AWS DeepRacer</h3>
                     <div class="project-tags">
                         <span class="project-tag">AWS</span>
                         <span class="project-tag">Reinforcement Learning</span>
                     </div>
-                    <a href="aws_project.html" class="btn">View Project</a>
+                    <a href="aws_project.html" class="btn" data-i18n="view_project_btn">View Project</a>
                 </div>
                 <div class="project reveal-card">
                     <div class="project-img-wrap">
                         <img src="house2.jpg" alt="House Data Prediction" loading="lazy" width="400" height="180">
-                        <span class="project-overlay">View project</span>
+                        <span class="project-overlay" data-i18n="view_project_overlay">View project</span>
                     </div>
-                    <h3>House Data Prediction</h3>
+                    <h3 data-i18n="house_title">House Data Prediction</h3>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">Scikit-learn</span>
                     </div>
-                    <a href="housing_predictions.html" class="btn">View Project</a>
+                    <a href="housing_predictions.html" class="btn" data-i18n="view_project_btn">View Project</a>
                 </div>
                 <div class="project reveal-card">
                     <div class="project-img-wrap">
                         <img src="stock_m.jpeg" alt="Stock Market Prediction" loading="lazy" width="400" height="180">
-                        <span class="project-overlay">View project</span>
+                        <span class="project-overlay" data-i18n="view_project_overlay">View project</span>
                     </div>
-                    <h3>Stock Market Prediction</h3>
+                    <h3 data-i18n="stock_title">Stock Market Prediction</h3>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">LSTM</span>
                     </div>
-                    <a href="stock_market_prediction.html" class="btn">View Project</a>
+                    <a href="stock_market_prediction.html" class="btn" data-i18n="view_project_btn">View Project</a>
                 </div>
                 <div class="project reveal-card">
                     <div class="project-img-wrap">
                         <img src="credit_card.jpeg" alt="Credit Card Fraud Detection" loading="lazy" width="400" height="180">
-                        <span class="project-overlay">View project</span>
+                        <span class="project-overlay" data-i18n="view_project_overlay">View project</span>
                     </div>
-                    <h3>Credit Card Fraud Detection</h3>
+                    <h3 data-i18n="fraud_title">Credit Card Fraud Detection</h3>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">Scikit-learn</span>
                     </div>
-                    <a href="credit_card_fraud_detection.html" class="btn">View Project</a>
+                    <a href="credit_card_fraud_detection.html" class="btn" data-i18n="view_project_btn">View Project</a>
                 </div>
             </div>
         </div>
@@ -165,22 +166,22 @@
 
     <section class="reveal" id="contact">
         <div class="container">
-            <h2>Contact Me</h2>
+            <h2 data-i18n="contact_title">Contact Me</h2>
             <form class="contact-form" method="post" action="https://api.web3forms.com/submit">
                 <input type="hidden" name="access_key" value="4e893202-4fc3-47f6-bbed-baadfe1152d3">
                 <input type="hidden" name="from_name" value="Portfolio Contact Form">
                 <input type="hidden" name="subject" value="New message from portfolio site">
 
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required placeholder="Your name">
+                <label for="name" data-i18n="label_name">Name</label>
+                <input type="text" name="name" id="name" required placeholder="Your name" data-i18n-ph="ph_name">
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required placeholder="you@example.com">
+                <label for="email" data-i18n="label_email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="you@example.com" data-i18n-ph="ph_email">
 
-                <label for="message">Message</label>
-                <textarea name="message" id="message" required placeholder="Your message..."></textarea>
+                <label for="message" data-i18n="label_message">Message</label>
+                <textarea name="message" id="message" required placeholder="Your message..." data-i18n-ph="ph_message"></textarea>
 
-                <button type="submit" class="btn btn-submit">Send message</button>
+                <button type="submit" class="btn btn-submit" data-i18n="send_btn">Send message</button>
             </form>
         </div>
     </section>
@@ -188,21 +189,21 @@
     <footer id="footer">
         <div class="footer-inner">
             <nav class="footer-nav">
-                <a href="#portfolio">Projects</a>
-                <a href="#contact">Contact</a>
-                <a href="shouhaybou_cv.pdf">Resume</a>
+                <a href="#portfolio" data-i18n="footer_projects">Projects</a>
+                <a href="#contact" data-i18n="footer_contact">Contact</a>
+                <a href="shouhaybou_cv.pdf" data-i18n="footer_resume">Resume</a>
             </nav>
             <div class="footer-social">
                 <a href="https://www.linkedin.com/in/shouhaybou-mbow/" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
                 <a href="https://github.com/shouhaybou?tab=repositories" aria-label="GitHub"><i class="ri-github-fill"></i></a>
             </div>
-            <p class="footer-credit">© 2025 Shouhaybou Mbow · All Rights Reserved</p>
+            <p class="footer-credit" data-i18n="footer_credit">© 2025 Shouhaybou Mbow · All Rights Reserved</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script type="text/javascript">
-        var typed = new Typed(".input", {
+        window.__typedInstance = new Typed(".input", {
             strings: ["Data Scientist", "Data Analyst", "Machine Learning Engineer", "AI Engineer"],
             typeSpeed: 80,
             backSpeed: 70,
@@ -302,5 +303,6 @@
             activeNav();
         })();
     </script>
+    <script src="lang.js"></script>
 </body>
 </html>

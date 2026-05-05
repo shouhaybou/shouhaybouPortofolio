@@ -14,42 +14,43 @@
 </head>
 <body class="project-page">
     <header>
-        <a href="index.html" class="logo">Portfolio</a>
+        <a href="index.html" class="logo" data-i18n="nav_logo">Portfolio</a>
         <ul class="navlist">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#portfolio">Portfolio</a></li>
-            <li><a href="index.html#skills">Skills</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#home" data-i18n="nav_home">Home</a></li>
+            <li><a href="index.html#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+            <li><a href="index.html#skills" data-i18n="nav_skills">Skills</a></li>
+            <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
         </ul>
         <div class="nav-right">
-            <a href="index.html#contact" class="nav-btn">Hire Me!</a>
+            <a href="index.html#contact" class="nav-btn" data-i18n="nav_hire">Hire Me!</a>
+            <button id="lang-toggle" class="lang-toggle">FR</button>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
     </header>
 
     <section class="project-detail reveal">
         <div class="container">
-            <h1>Housing Data Prediction Project</h1>
+            <h1 data-i18n="housing_title">Housing Data Prediction Project</h1>
             <img src="house3.jpg" alt="Housing Data Prediction Project Image" class="project-img">
-            <p>
+            <p data-i18n="housing_desc">
                 This project involves building a predictive model to forecast housing prices using a variety of data features. 
                 The project includes data preprocessing, feature engineering, model training, and evaluation. 
                 The model aims to provide accurate predictions to assist in making informed decisions in the real estate market.
             </p>
-            <h2>Project Details</h2>
-            <p>
+            <h2 data-i18n="housing_details">Project Details</h2>
+            <p data-i18n="housing_tech">
                 <strong>Technologies Used:</strong> Python, Scikit-learn, Pandas, NumPy<br>
                 <strong>Data Source:</strong> Github<br>
                 <strong>Key Features:</strong>
             </p>
             <ul>
-                <li>Data cleaning and preprocessing</li>
-                <li>Exploratory data analysis and feature engineering</li>
-                <li>Model training with various regression algorithms</li>
-                <li>Model evaluation and selection</li>
+                <li data-i18n="housing_f1">Data cleaning and preprocessing</li>
+                <li data-i18n="housing_f2">Exploratory data analysis and feature engineering</li>
+                <li data-i18n="housing_f3">Model training with various regression algorithms</li>
+                <li data-i18n="housing_f4">Model evaluation and selection</li>
             </ul>
 
-            <h2>Some of the Code</h2>
+            <h2 data-i18n="housing_code_title">Some of the Code</h2>
             <pre class="code-block">
 <code>
 // preview code for data preprocessing in the Housing Data Prediction project
@@ -96,27 +97,27 @@ X_test = scaler.transform(X_test)
 </code>
             </pre>
             <div class="project-links">
-                <a href="Housing Data Prediction.zip" class="btn">Download Code</a>
+                <a href="Housing Data Prediction.zip" class="btn" data-i18n="download_code">Download Code</a>
             </div>
         </div>
     </section>
 
     <div class="back-to-projects">
-        <a href="index.html#portfolio" class="btn">← Back to Projects</a>
+        <a href="index.html#portfolio" class="btn" data-i18n="back_to_projects">← Back to Projects</a>
     </div>
 
     <footer id="footer">
         <div class="footer-inner">
             <nav class="footer-nav">
-                <a href="index.html#portfolio">Projects</a>
-                <a href="index.html#contact">Contact</a>
-                <a href="shouhaybou_cv.pdf">Resume</a>
+                <a href="index.html#portfolio" data-i18n="footer_projects">Projects</a>
+                <a href="index.html#contact" data-i18n="footer_contact">Contact</a>
+                <a href="shouhaybou_cv.pdf" data-i18n="footer_resume">Resume</a>
             </nav>
             <div class="footer-social">
                 <a href="https://www.linkedin.com/in/shouhaybou-mbow/" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
                 <a href="https://github.com/shouhaybou?tab=repositories" aria-label="GitHub"><i class="ri-github-fill"></i></a>
             </div>
-            <p class="footer-credit">© 2025 Shouhaybou Mbow · All Rights Reserved</p>
+            <p class="footer-credit" data-i18n="footer_credit">© 2025 Shouhaybou Mbow · All Rights Reserved</p>
         </div>
     </footer>
 
@@ -149,6 +150,7 @@ X_test = scaler.transform(X_test)
             onScroll();
         })();
     </script>
+    <script src="lang.js"></script>
 </body>
 </html>
 
